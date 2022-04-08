@@ -1,0 +1,100 @@
+.example-name{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 5px;
+}
+
+.example-category{
+    font-size: 16px;
+    line-height: 1.87;
+    color: var(--secondary-txt-color);
+}
+
+.example-info{
+    padding: 20px 24px;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+}
+
+.portfolio-navigation{
+    display: flex;
+    justify-content : center;
+    margin-bottom: 50px;
+    transition: color var(--animation), 
+                background-color var(--animation), 
+                box-shadow var(--animation);
+}
+
+.portfolio-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.portfolio-nav-button{
+    padding: 6px 22px;
+    &:hover,
+    &:focus{
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.portfolio-exam{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.example:not(:nth-child(n+7)) {
+    margin-bottom: 30px;
+}
+
+.example:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.example-link{
+    display: block;
+    transition: box-shadow var(--animation);
+    &:hover,
+    &:focus{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .portfolii-image-container{
+        transform: translateY(0);
+    }
+}
+
+.portfolii-image-text{
+    display: flex;
+    justify-content: center;
+    background: rgba(33, 150, 243, 0.9);
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+    height: 100%;
+    width: 100%;
+    padding: 63px 24px;
+}
+
+.portfolii-image-container{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform var(--animation);
+}
+
+.portfolii-image-box{
+    position: relative;
+    overflow: hidden;
+}
+
